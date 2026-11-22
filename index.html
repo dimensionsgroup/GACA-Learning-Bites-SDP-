@@ -40,12 +40,12 @@ main{flex:1}
 .en{direction:ltr;unicode-bidi:isolate;font-family:"Co Text"}
 .caps{letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:700}
 .title{font-family:"Co Headline";font-weight:700;color:var(--ink);font-size:clamp(26px,4.6vw,38px);line-height:1.3;color:var(--white)}
-.title-en{color:var(--white);opacity:.9;font-size:clamp(17px,2.8vw,24px);margin-top:4px;display:block;text-align:right}
+.title-en{color:var(--white);opacity:.9;font-size:clamp(17px,2.8vw,24px);margin-top:8px;display:block;text-align:right}
 .eyebrow{color:var(--white);opacity:.85;margin-bottom:10px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
 .eyebrow b{font-family:"Co Headline";font-weight:700}
 
 /* stepper */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:26px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:34px}
 .steps div{border-top:3px solid rgba(255,255,255,.35);padding-top:6px;font-size:13px;color:rgba(255,255,255,.7)}
 .steps div.done{border-color:var(--mint)}
 .steps div.cur{border-color:var(--cyan);color:var(--white);font-weight:700}
@@ -61,13 +61,13 @@ main{flex:1}
 .tagw.big{width:84px;height:74px}.tagw.big::before{top:12px;height:50px}.tagw.big .tag{font-size:40px}
 
 /* panel */
-.panel{background:var(--panel);border-radius:30px;padding:22px 22px 22px 28px;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
-.item{display:flex;gap:18px;align-items:center;padding:14px 0}
+.panel{background:var(--panel);border-radius:30px;padding:30px 30px 30px 34px;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.item{display:flex;gap:22px;align-items:center;padding:22px 0}.item:first-child{padding-top:4px}.item:last-child{padding-bottom:4px}
 .item+.item{border-top:1px solid var(--line)}
-.item h3{font-family:"Co Headline";font-weight:700;font-size:20px;line-height:1.35}
+.item h3{font-family:"Co Headline";font-weight:700;font-size:20px;line-height:1.35;margin-bottom:8px}
 .item h3 .en{font-family:"Co Text";font-weight:400;font-size:15px;margin-right:10px;opacity:.85}
-.item p{font-size:15.5px;opacity:.95}
-.item p.en{font-size:13.5px;opacity:.72;text-align:right;display:block}
+.item p{font-size:16px;line-height:1.8;opacity:.95}
+.item p.en{font-size:13.5px;line-height:1.6;opacity:.72;text-align:right;display:block;margin-top:6px}
 
 .note{text-align:center;margin:26px auto 6px;max-width:560px}
 .note .k{color:var(--cyan);font-size:19px}
@@ -77,9 +77,9 @@ main{flex:1}
 
 /* poll */
 .q{font-family:"Co Headline";font-weight:700;font-size:clamp(21px,3.6vw,28px);line-height:1.45;color:var(--white)}
-.q-en{display:block;text-align:right;font-size:15px;opacity:.82;margin:6px 0 18px}
-.opts{display:grid;gap:10px}
-.opt{display:flex;align-items:center;gap:18px;padding:10px 18px 10px 20px;border-radius:16px;background:var(--panel);border:2px solid transparent;cursor:pointer;transition:border-color .15s,background .15s}
+.q-en{display:block;text-align:right;font-size:15px;opacity:.82;margin:12px 0 26px}
+.opts{display:grid;gap:14px}
+.opt{display:flex;align-items:center;gap:20px;padding:16px 22px 16px 24px;border-radius:16px;background:var(--panel);border:2px solid transparent;cursor:pointer;transition:border-color .15s,background .15s}
 .opt:hover{border-color:rgba(143,224,255,.5)}
 .opt input{position:absolute;opacity:0;pointer-events:none}
 .opt .tagw{width:52px;height:44px}.opt .tagw::before{top:7px;height:30px}.opt .tag{font-size:22px}
@@ -92,20 +92,29 @@ main{flex:1}
 .opt:focus-within{outline:3px solid var(--cyan);outline-offset:2px}
 
 /* tip */
-.chose{display:flex;gap:18px;align-items:center;margin-bottom:22px}
+.chose{display:flex;gap:20px;align-items:center;margin-bottom:32px}
 .chose .lbl{color:var(--cyan);display:flex;gap:8px;align-items:baseline;font-size:14px}
 .chose h1{font-family:"Co Headline";font-weight:700;font-size:clamp(28px,5vw,40px);line-height:1.25;color:var(--white)}
 .chose .en.name{display:block;text-align:right;color:var(--white);opacity:.9;font-size:17px}
 .insight{font-family:"Co Headline";font-weight:700;font-size:clamp(21px,3.6vw,27px);line-height:1.5;margin-top:4px}
-.insight-en{display:block;text-align:right;opacity:.8;font-size:15px;margin:4px 0 18px}
-.practice .lbl{color:var(--mint);display:flex;gap:8px;align-items:baseline;font-size:14px;margin-bottom:8px}
+.insight-en{display:block;text-align:right;opacity:.8;font-size:15px;line-height:1.7;margin:16px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.practice .lbl{color:var(--mint);display:flex;gap:8px;align-items:baseline;font-size:14px;margin-bottom:16px}
 .practice .lbl::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mint);align-self:center}
-.practice p{font-size:19px;line-height:1.75}
-.practice p.en{font-size:15px;opacity:.78;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);text-align:right;display:block}
+.practice .insight{font-family:"Co Text";font-weight:400;font-size:clamp(17.5px,2.8vw,20px);line-height:1.8}
+
+.intro{font-size:17px;margin-bottom:6px}.intro b{font-family:"Co Headline";font-weight:700;color:var(--cyan);white-space:nowrap}
+.intro.en{display:block;text-align:right;font-size:13px;opacity:.75;margin-bottom:26px}
+.kick{display:flex;gap:10px;align-items:baseline;color:var(--cyan);font-size:15px;margin-bottom:12px}
+.kick.sm{color:var(--white);opacity:.85;font-size:14px;margin:0 0 14px}
+.act p{font-size:18px;line-height:1.85;margin-bottom:16px}.act p:last-child{margin-bottom:0}
+.act p.qt{font-family:"Co Headline";font-weight:700;color:var(--mint);font-size:19px;padding:4px 16px 4px 0;border-right:3px solid var(--mint)}
+.act.en{display:block;text-align:right;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.act.en p{font-size:14.5px;opacity:.8;line-height:1.7;margin-bottom:12px}
+.act.en p.qt{font-family:"Co Text";font-weight:700;color:var(--mint);font-size:15px;opacity:1;border-right:0;border-left:3px solid var(--mint);padding:2px 0 2px 14px}
 .saved{font-size:13px;opacity:.7;margin-top:14px;text-align:center}
 
 /* buttons */
-.actions{display:flex;gap:10px;margin-top:26px}
+.actions{display:flex;gap:12px;margin-top:36px}
 .btn{font:inherit;cursor:pointer;border:0;border-radius:16px;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;text-align:right;min-height:58px}
 .btn b{font-family:"Co Headline";font-weight:700;font-size:18px;display:block;line-height:1.2}
 .btn .en{font-size:11.5px;opacity:.8;display:block;text-align:right}
@@ -137,7 +146,8 @@ footer img{height:54px;width:auto}
 .copy{text-align:center;font-size:11px;opacity:.5;margin-top:14px}
 @media (max-width:520px){
   .wrap{padding:20px 16px 18px}
-  .panel{padding:14px 14px 14px 22px;border-radius:26px}
+  .panel{padding:22px 18px 22px 24px;border-radius:26px}
+  .item{gap:16px;padding:18px 0}.opt{padding:14px 16px 14px 18px}
   .item{gap:14px}.item h3{font-size:18px}.item h3 .en{display:block;margin:0;font-size:13.5px}
   .plane{top:1.5vh;left:4vw;width:64px}
   .tagw{width:54px;height:48px}.tagw::before{top:8px;height:32px}.tag{font-size:25px}
@@ -145,7 +155,7 @@ footer img{height:54px;width:auto}
   .actions{flex-direction:column-reverse}.btn.sec{width:100%}
   .cover .flow{grid-template-columns:1fr}
   footer img{height:42px}footer .org{font-size:10px}
-  .practice p{font-size:17.5px}
+  .act p{font-size:16.5px}
 }
 </style>
 
@@ -162,7 +172,7 @@ footer img{height:54px;width:auto}
 
 <div class="wrap">
   <header class="top">
-    <div class="prog">برنامج التعاقب الوظيفي<small>برنامج التدريب والتطوير</small></div>
+    <div class="prog">برنامج تطوير التعاقب الوظيفي<small class="en caps" style="font-size:11px;letter-spacing:.14em">SUCCESSION DEVELOPMENT PROGRAM</small></div>
   </header>
 
   <main id="main" aria-live="polite">
@@ -183,15 +193,11 @@ footer img{height:54px;width:auto}
     <!-- 2 learn -->
     <section class="screen" id="s-learn" aria-labelledby="t-learn">
       <div class="steps" data-step="1"></div>
-      <div class="eyebrow"><span class="en caps">THE FRAMEWORK</span><b>الإطار</b></div>
+      <p class="intro">تمر هذه التجربة التعليمية بثلاث مراحل: <b>تعرّف ← اختر ← طبّق</b></p>
+      <p class="intro en">This learning experience has three stages: Learn, Choose, Practise.</p>
       <h1 class="title" id="t-learn">الركائز الخمس للقيادة الأصيلة</h1>
       <span class="title-en en">The Five Pillars of Authentic Leadership</span>
-      <div class="panel" style="margin-top:22px" id="pillars"></div>
-      <div class="note">
-        <div class="k">تذكير من ورشة <b>القيادة الأصيلة والشاملة</b>:</div>
-        <p>القيادة الأصيلة ليست صفة واحدة، بل خمس ركائز تمارسها في كل قرار.</p>
-        <p class="en">Authentic leadership is not one trait. It is five pillars you practise in every decision.</p>
-      </div>
+      <div class="panel" style="margin-top:28px" id="pillars"></div>
       <div class="actions">
         <button class="btn sec" data-go="cover"><span><b>رجوع</b><span class="en">Back</span></span><span class="arr">→</span></button>
         <button class="btn pri" data-go="choose"><span><b>التالي</b><span class="en">Next</span></span><span class="arr">←</span></button>
@@ -201,12 +207,14 @@ footer img{height:54px;width:auto}
     <!-- 3 choose -->
     <section class="screen" id="s-choose" aria-labelledby="t-choose">
       <div class="steps" data-step="2"></div>
-      <h1 class="q" id="t-choose">أيّ من هذه الركائز الخمس تجدها الأصعبَ عليك أن تُمارسها باستمرارٍ في موقعك اليوم؟</h1>
-      <span class="q-en en">Which of these five pillars do you find hardest to practise consistently in your role today?</span>
+      <div class="kick"><span>سؤال للتأمل الذاتي</span><span class="en caps">A QUESTION FOR SELF-REFLECTION</span></div>
+      <h1 class="q" id="t-choose">أيّ من الركائز الخمس التالية تجد صعوبة أكبر في ممارستها باستمرار في دورك القيادي الحالي؟</h1>
+      <span class="q-en en">Which of the following five pillars do you find hardest to practise consistently in your current leadership role?</span>
+      <div class="kick sm"><span>اختر إجابة واحدة:</span><span class="en">Choose one answer</span></div>
       <div class="opts" role="radiogroup" aria-labelledby="t-choose" id="opts"></div>
       <div class="actions">
         <button class="btn sec" data-go="learn"><span><b>رجوع</b><span class="en">Back</span></span><span class="arr">→</span></button>
-        <button class="btn pri" id="submit" disabled><span><b>شاركنا إجابتك، نصف دقيقة</b><span class="en">Share your answer, 30 seconds</span></span><span class="arr">←</span></button>
+        <button class="btn pri" id="submit" disabled><span><b>شاركنا إجابتك، لن يستغرق الأمر سوى 30 ثانية</b><span class="en">Share your answer, it takes only 30 seconds</span></span><span class="arr">←</span></button>
       </div>
     </section>
 
@@ -216,17 +224,20 @@ footer img{height:54px;width:auto}
       <div class="chose">
         <div class="tagw big"><div class="tag" id="tip-n">01</div></div>
         <div>
-          <div class="lbl"><span>اخترتَ</span><span class="en caps">YOU CHOSE</span></div>
+          <div class="lbl"><span>لقد اخترت:</span><span class="en caps">YOU CHOSE</span></div>
           <h1 id="t-tip">الوعي بالذات</h1>
           <span class="en name" id="tip-en">Self-Awareness</span>
         </div>
       </div>
       <div class="panel practice">
+        <div class="lbl"><span>الرسالة الرئيسية</span><span class="en caps">KEY MESSAGE</span></div>
         <p class="insight" id="tip-ins"></p>
         <span class="insight-en en" id="tip-ins-en"></span>
-        <div class="lbl"><span>ممارسة هذا الأسبوع</span><span class="en caps">THIS WEEK'S PRACTICE</span></div>
-        <p id="tip-ar"></p>
-        <p class="en" id="tip-en2"></p>
+      </div>
+      <div class="panel practice" style="margin-top:18px">
+        <div class="lbl"><span>نشاط تطبيقي</span><span class="en caps">PRACTICE ACTIVITY</span></div>
+        <div id="tip-ar" class="act"></div>
+        <div id="tip-en2" class="act en"></div>
       </div>
       <p class="saved" id="form-row" hidden><a id="form-link" href="#" target="_blank" rel="noopener" style="color:var(--cyan)">سجّل إجابتك في الاستطلاع</a></p>
       <div class="actions">
@@ -251,30 +262,64 @@ const KEY = "gaca-bite-five-pillars-v1";
 
 const PILLARS = [
   {ar:"الوعي بالذات", en:"Self-Awareness",
-   d:"معرفة نقاط قوّتك ومحفّزاتك", de:"Knowing your strengths and triggers",
-   ins:"المنصب يحجب عنك الإشاراتِ الصادقة.", insEn:"Seniority insulates you from honest signal.",
-   p:"في نهاية اجتماع، اسأل شخصًا تثق برأيه: «ماذا فاتني في هذه الغرفة؟» واسمعِ الإجابة دون تفسير.",
-   pe:"End one meeting by asking a trusted person, \"What did I miss?\" and just listen."},
+   d:"أن تدرك نقاط قوتك، وتتعرف على المواقف والعوامل التي تثير استجاباتك العاطفية وتؤثر في سلوكك وقراراتك.",
+   de:"Recognising your strengths, and the situations and factors that trigger your emotional responses and shape your behaviour and decisions.",
+   msg:"كلما ارتفعت مكانتك الوظيفية، قلّت فرص حصولك على ملاحظات صريحة وصادقة من الآخرين.",
+   msgEn:"The more senior your role, the fewer chances you have to receive frank, honest feedback from others.",
+   act:["في نهاية أحد اجتماعاتك القادمة، توجّه إلى شخص تثق برأيه، واسأله:",
+        "«ما الذي ربما غفلتُ عن ملاحظته أو إدراكه خلال هذا الاجتماع؟»",
+        "استمع إلى إجابته باهتمام، دون مقاطعة أو محاولة لتبرير موقفك أو الدفاع عن قراراتك."],
+   actEn:["At the end of one of your next meetings, turn to someone whose judgement you trust and ask:",
+        "“What might I have missed or overlooked in this meeting?”",
+        "Listen closely to the answer, without interrupting or trying to justify your position or defend your decisions."]},
   {ar:"القيم", en:"Values",
-   d:"ما لا تتنازل عنه تحت الضغط", de:"What you do not compromise under pressure",
-   ins:"التمسّك بالقيم حين تُكلّفك شيئًا هو المحك.", insEn:"Values matter when they cost you.",
-   p:"سمِّ قرارًا واحدًا تنازلتَ فيه عن قيمة تدّعيها. ما الذي دفعك للتنازل تحديدًا؟",
-   pe:"Name one recent decision where you compromised a value. What specifically pushed you?"},
+   d:"أن تتمسك بمبادئك وقيمك الأساسية، حتى عندما تواجه ضغوطًا تدفعك إلى التنازل عنها.",
+   de:"Holding to your core principles and values, even under pressure to compromise them.",
+   msg:"لا تظهر قوة التزامك بقيمك عندما يكون التمسك بها سهلًا، بل عندما يتطلب منك ذلك تحمّل تكلفة أو تقديم تنازل.",
+   msgEn:"The strength of your commitment to your values does not show when holding to them is easy, but when it costs you something or asks you to give something up.",
+   act:["استرجع قرارًا اتخذته مؤخرًا، وشعرت فيه أنك تنازلت عن إحدى قيمك أو مبادئك الأساسية.",
+        "ثم اسأل نفسك:",
+        "«ما الذي دفعني تحديدًا إلى التنازل عن هذه القيمة؟»",
+        "حاول تحديد العامل الحقيقي الذي أثّر في قرارك، سواء كان ضغطًا من الآخرين، أو خوفًا من العواقب، أو رغبة في تحقيق نتيجة معينة."],
+   actEn:["Recall a recent decision in which you felt you compromised one of your core values or principles.",
+        "Then ask yourself:",
+        "“What exactly pushed me to compromise this value?”",
+        "Try to identify the real factor behind your decision, whether pressure from others, fear of the consequences, or a wish to achieve a particular result."]},
   {ar:"المنظور الأخلاقي", en:"Moral Perspective",
-   d:"البوصلة الداخلية عند القرار الصعب", de:"The internal compass for hard calls",
-   ins:"أصعبُ القرارات صوابٌ يصطدم بصوابٍ آخر.", insEn:"The hardest calls are right versus right.",
-   p:"حدِّد قرارًا تحمله تتصارع فيه قيمتان مشروعتان. اكتب الاثنتين، لا تحاول حلّه، فقط أن تراه.",
-   pe:"Identify one decision where two legitimate values are in tension. Write both. Do not solve, just see."},
+   d:"أن تستند إلى مبادئك الأخلاقية بوصفها بوصلة داخلية توجهك عند اتخاذ القرارات الصعبة.",
+   de:"Drawing on your moral principles as an internal compass when making difficult decisions.",
+   msg:"أصعب القرارات الأخلاقية ليست دائمًا تلك التي نختار فيها بين الصواب والخطأ، بل تلك التي نضطر فيها إلى المفاضلة بين خيارين يحمل كل منهما قيمة أخلاقية مشروعة.",
+   msgEn:"The hardest ethical decisions are not always a choice between right and wrong, but a trade-off between two options that each carry a legitimate moral value.",
+   act:["فكّر في قرار تواجهه حاليًا، ويتطلب منك المفاضلة بين قيمتين أو مبدأين أخلاقيين مهمين.",
+        "حدّد القيمتين واكتبهما بوضوح.",
+        "لا تحاول الوصول إلى حل في هذه المرحلة؛ ركّز فقط على فهم التعارض بينهما، وإدراك ما تمثله كل قيمة بالنسبة إليك."],
+   actEn:["Think of a decision you face now that requires you to weigh two important values or ethical principles.",
+        "Name the two values and write them down clearly.",
+        "Do not try to reach a solution at this stage; focus only on understanding the tension between them and what each value means to you."]},
   {ar:"المعالجة المتوازنة", en:"Balanced Processing",
-   d:"سماع الرأي المخالف قبل الحسم", de:"Hearing the counter-view before deciding",
-   ins:"الركيزةُ التي بنى عليها أرغيريس سلّم الاستدلال.", insEn:"The pillar at the heart of Argyris's Ladder of Inference.",
-   p:"قبل قرارٍ واحد هذا الأسبوع، اسأل نفسك: «ما الذي أحتاج أن أسمعه ليُغيّر رأيي؟»، وكُن مستعدًّا.",
-   pe:"Before one decision this week, ask yourself, \"What would I need to hear to change my mind?\" and mean it."},
-  {ar:"وضوح العلاقات", en:"Relational Transparency",
-   d:"صدق يبني الثقة، لا يجرحها", de:"Honesty that builds trust, not wounds",
-   ins:"أصعبُ الركائز في المعايرة.", insEn:"Hardest to calibrate.",
-   p:"سمِّ أمرًا كنتَ تُخفيه عن زميلٍ يحتاج أن يسمعه. قرِّر: أن تُشاركه أو تتحمّل ثمن كتمانه.",
-   pe:"Name one thing you have been holding back that a colleague needs to hear. Decide: share it, or accept the cost."}
+   d:"أن تنصت إلى الآراء المختلفة، وخاصة تلك التي تخالف وجهة نظرك، وتدرسها بموضوعية قبل اتخاذ القرار.",
+   de:"Listening to differing views, especially those that challenge your own, and weighing them objectively before deciding.",
+   msg:"تُعد المعالجة المتوازنة إحدى الركائز الأساسية التي تقوم عليها فكرة «سلّم الاستدلال» التي طوّرها كريس أرجيريس (Chris Argyris)، والتي توضّح كيف ننتقل من ملاحظة المعلومات إلى تكوين الافتراضات والاستنتاجات، ثم اتخاذ القرارات.",
+   msgEn:"Balanced processing is one of the core pillars behind the Ladder of Inference developed by Chris Argyris, which shows how we move from observing information to forming assumptions and conclusions, and then to making decisions.",
+   act:["قبل اتخاذ أحد قراراتك المهمة خلال هذا الأسبوع، توقّف واسأل نفسك:",
+        "«ما المعلومات أو وجهات النظر التي قد تجعلني أغيّر رأيي بشأن هذا القرار؟»",
+        "اطرح السؤال بصدق، وكن مستعدًا بالفعل لإعادة النظر في موقفك إذا ظهرت معلومات أو أدلة تستدعي ذلك."],
+   actEn:["Before one of your important decisions this week, pause and ask yourself:",
+        "“What information or viewpoints could change my mind about this decision?”",
+        "Ask the question honestly, and be genuinely ready to reconsider your position if information or evidence calls for it."]},
+  {ar:"الشفافية في العلاقات", en:"Relational Transparency",
+   d:"أن تتواصل بصدق ووضوح مع الآخرين، بطريقة تعزز الثقة وتحافظ على الاحترام المتبادل، دون تجريح أو إساءة.",
+   de:"Communicating honestly and clearly with others, in a way that builds trust and preserves mutual respect, without hurt or offence.",
+   msg:"تُعد الشفافية في العلاقات من أكثر الركائز القيادية صعوبة في تحقيق التوازن؛ فهي تتطلب الصدق والوضوح، مع مراعاة مشاعر الآخرين والحفاظ على الاحترام المتبادل.",
+   msgEn:"Relational transparency is one of the hardest leadership pillars to balance; it calls for honesty and clarity while respecting others' feelings and preserving mutual respect.",
+   act:["فكّر في أمر مهم تتردد في مصارحة أحد زملائك به، رغم إدراكك أنه بحاجة إلى معرفته.",
+        "ثم اتخذ قرارًا واعيًا:",
+        "«هل سأصارحه بما يحتاج إلى معرفته، أم سأختار الصمت وأتحمّل العواقب المترتبة عليه؟»",
+        "تذكّر أن تجنّب الحديث الصعب قد يمنحك راحة مؤقتة، لكنه قد يؤثر على الثقة وجودة العلاقة على المدى الطويل."],
+   actEn:["Think of something important you are hesitating to tell a colleague, even though you know they need to know it.",
+        "Then make a conscious decision:",
+        "“Will I tell them what they need to know, or will I stay silent and accept the consequences?”",
+        "Remember that avoiding a difficult conversation may bring short-term relief, but it can affect trust and the quality of the relationship in the long run."]}
 ];
 const STEPS = [["تعرّف","Learn"],["اختر","Choose"],["طبّق","Practise"]];
 
@@ -311,8 +356,9 @@ $("#opts").addEventListener("change", e=>{ if(e.target.name==="pillar") select(+
 function showTip(i){
   const p = PILLARS[i];
   $("#tip-n").textContent = i+1; $("#t-tip").textContent = p.ar; $("#tip-en").textContent = p.en;
-  $("#tip-ins").textContent = p.ins; $("#tip-ins-en").textContent = p.insEn;
-  $("#tip-ar").textContent = p.p; $("#tip-en2").textContent = p.pe;
+  $("#tip-ins").textContent = p.msg; $("#tip-ins-en").textContent = p.msgEn;
+  const paras = arr => arr.map(x=>`<p${/^[«“]/.test(x)?' class="qt"':''}>${esc(x)}</p>`).join("");
+  $("#tip-ar").innerHTML = paras(p.act); $("#tip-en2").innerHTML = paras(p.actEn);
   if(FORM_URL){ $("#form-row").hidden = false; $("#form-link").href = FORM_URL; }
 }
 function go(id){
